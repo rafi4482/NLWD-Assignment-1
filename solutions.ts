@@ -34,6 +34,15 @@ function checkType(strnum: string | number) {
 }
 
 //Problem 4
+function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {
+  return obj[key]
+}
+
+const user = {
+  id: 1,
+  name: "John Doe",
+  age: 21
+}
 
 //Problem 5
 interface Book {
@@ -94,4 +103,3 @@ function getIntersection(arr1: number[], arr2: number[]): number[] {
   return result
 }
 
-console.log(getIntersection([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]))
