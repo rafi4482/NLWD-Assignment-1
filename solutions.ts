@@ -23,14 +23,14 @@ function reverseString(str: string): string {
 }
 
 //Problem 3
-function checkType(strnum: string | number) {
+type StringOrNumber = string | number
+
+function checkType(strnum: StringOrNumber): string {
     if (typeof strnum === "string") {
         return "String"
     }
 
-    if (typeof strnum === "number") {
-        return "Number"
-    }
+    return "Number"
 }
 
 //Problem 4
